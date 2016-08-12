@@ -1,0 +1,45 @@
+﻿<ion-header>
+    <ion-navbar>
+        <ion-title>Menu</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="menu">
+    <ion-list>
+        <ion-list-header>
+            Orte
+        </ion-list-header>
+        <ion-item>
+            <ion-label> Österreich</ion-label>
+            <ion-toggle [(ngModel)]="oeste" [(ngChecked)]="oeste"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label> Schweiz</ion-label>
+            <ion-toggle [(ngModel)]="schweiz" [(ngChecked)]="schweiz"></ion-toggle>
+        </ion-item>
+        <ion-item (click)="doCheckbox()">
+            <ion-label> Deutschland</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>
+            Interesa per rubriken tjera
+        </ion-list-header>
+        <ion-item>
+            <ion-label> Auto</ion-label>
+            <ion-toggle [(ngModel)]="autoMobil" [(ngChecked)]="autoMobil"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label> Beauty</ion-label>
+            <ion-toggle [(ngModel)]="beauty" [(ngChecked)]="beauty"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label> Handwerk</ion-label>
+            <ion-toggle [(ngModel)]="handwerk" [(ngChecked)]="handwerk"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label> Internet</ion-label>
+            <ion-toggle [(ngModel)]="internet" [(ngChecked)]="internet"></ion-toggle>
+        </ion-item>
+    </ion-list>
+</ion-content>

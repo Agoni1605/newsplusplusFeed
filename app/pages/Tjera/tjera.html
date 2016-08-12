@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Tjera
+        </ion-title>
+        <button end menuToggle (click)="goToMenu($event, post)">
+            <ion-icon name="cog"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content class="tjera">
+    <ion-card *ngFor="let post of posts">
+        <ion-div *ngIf="post.bundesland.indexOf('oester')>-1 && oester == 'true' || post.bundesland.indexOf('schweiz')>-1 && schweiz == 'true' || post.bundesland.indexOf('Baden-Württemberg')>-1 && baden == 'true' || post.bundesland.indexOf('Bayern')>-1 && bayer == 'true' || post.bundesland.indexOf('Berlin')>-1 && berli == 'true' || post.bundesland.indexOf('Brandenburg')>-1 && brand == 'true' || post.bundesland.indexOf('Bremen')>-1 && breme == 'true' || post.bundesland.indexOf('Hamburg')>-1 && hambu == 'true' || post.bundesland.indexOf('Hessen')>-1 && hesse == 'true' || post.bundesland.indexOf('Mecklenburg-Vorpommern')>-1 && meckl == 'true' || post.bundesland.indexOf('Niedersachsen')>-1 && niede == 'true' || post.bundesland.indexOf('Nordrhein-Westfalen')>-1 && nordr == 'true' || post.bundesland.indexOf('Rheinland-Pfalz')>-1 && rhein == 'true' || post.bundesland.indexOf('Saarland')>-1 && saarl == 'true' || post.bundesland.indexOf('Sachsen1')>-1 && sachs == 'true' || post.bundesland.indexOf('Sachsen-Anhalt')>-1 && sachsA == 'true' || post.bundesland.indexOf('Schleswig-Holstein')>-1 && schle == 'true' || post.bundesland.indexOf('Thüringen')>-1 && thuer == 'true'">
+            <ion-div *ngIf="post.bereich.indexOf('auto')>-1 && autoMobil == 'true' || post.bereich.indexOf('beauty')>-1 && beauty == 'true' || post.bereich.indexOf('handwerk')>-1 && handwerk == 'true' || post.bereich.indexOf('internet')>-1 && internet == 'true'">
+                <ion-item>
+                    <ion-avatar item-left>
+                        <img src="http://adresaime.de/{{post.thumbnail}}">
+                    </ion-avatar>
+                    <h2 style="text-align: left;">{{post.user_name}}</h2>
+                    <p>{{post.city}} | {{post.street}}</p>
+                </ion-item>
+                <a href="http://{{post.extra_text}}" target="_blank">
+                    <img class="imageRatio" src="http://adresaime.de/{{post.pictureAdd}}" />
+                </a>
+                <ion-card-content>
+                    <ion-card-title>
+                        {{post.headliner}}
+                    </ion-card-title>
+                    <p>
+                        {{post.message}}
+                    </p>
+                </ion-card-content>
+                <ion-item>
+                    <button clear item-left (click)="callIT('tel:'+post.telefone)"><ion-icon name="call"></ion-icon>Thirr</button>
+                    <button clear item-right (click)="mailIT('mailto:'+post.email)"><ion-icon name="mail"></ion-icon>E-Mail</button>
+                </ion-item>
+            </ion-div>
+        </ion-div>
+    </ion-card>
+</ion-content>

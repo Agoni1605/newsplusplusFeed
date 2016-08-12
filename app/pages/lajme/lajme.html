@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="lajmeAll">
+    <ion-card *ngFor="let post of underArray">
+        <div (click)="goToLink(post.link)">
+            <ion-item>
+                <p>{{post.pubDate}}</p>
+            </ion-item>
+            <img [src]="post.pic" />
+            <ion-card-content>
+                <ion-card-title>
+                    {{post.header}}
+                </ion-card-title>
+                <p>
+                    {{post.subText}}
+                </p>
+            </ion-card-content>
+        </div>
+    </ion-card>
+</ion-content>

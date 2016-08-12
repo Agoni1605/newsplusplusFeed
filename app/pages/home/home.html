@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Lajme</ion-title>
+        <button end menuToggle (click)="goToMenu($event, post)">
+            <ion-icon name="cog"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+    <ion-grid>
+        <ion-row wrap>
+            <ion-col class="lajmetEFundit" width-40 (click)="clicked('Lajmet e Fundit', 'dodgerblue', 'ballina')"><br /><br />Lajmet te fundit <br /><br /><br /></ion-col>
+            <ion-col class="lajmet" width-40 (click)="clicked('Lajme', 'darkred', 'lajme')"><br /><br />Lajme <br /><br /><br /></ion-col>
+        </ion-row>
+        <ion-row wrap>
+            <ion-col class="sport" width-40 (click)="clicked('Sport', 'darkolivegreen', 'sport')"><br /><br />Sport <br /><br /><br /></ion-col>
+            <ion-col class="roze" width-40 (click)="clicked('Roze', 'lightgoldenrodyellow', 'roze')"><br /><br />Roze <br /><br /><br /></ion-col>
+        </ion-row>
+        <ion-row wrap>
+            <ion-col class="shneta" width-40 (click)="clicked('Shneta', 'darkturquoise', 'shneta')"><br /><br />Shneta <br /><br /><br /></ion-col>
+            <ion-col class="fitnesMeFatonin" width-40 (click)="clicked('Fitnes me Fatonin', 'lightgrey', 'fitnes')"><br /><br />Fitnes me Fatonin <br /><br /><br /></ion-col>
+        </ion-row>
+        <ion-row wrap>
+            <ion-col class="opinioneDheEditoriale" width-40 (click)="clicked('Opinione dhe Editoriale', 'slategray', 'oped')"><br /><br />Opinione dhe Editoriale <br /><br /></ion-col>
+            <ion-col class="arte" width-40 (click)="clicked('arte', 'blueviolet', 'arte')"><br /><br />Arte <br /><br /><br /></ion-col>
+        </ion-row>
+        <ion-row wrap>
+            <ion-col class="fun" width-40 (click)="clicked('Fun', 'lawngreen', 'fun')"><br /><br />Fun <br /><br /><br /></ion-col>
+            <ion-col class="mistere" width-40 (click)="clicked('Mistere', 'deepskyblue', 'mistere')"><br /><br />Mistere <br /><br /><br /></ion-col>
+        </ion-row>
+        <ion-row wrap>
+            <ion-col class="autotech" width-40 (click)="clicked('Autotech', 'cornflowerblue', 'auto-tech')"><br /><br />Autotech <br /><br /><br /></ion-col>
+            <ion-col class="merrejep" width-40><br /><br /> <br /><br /><br /></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
